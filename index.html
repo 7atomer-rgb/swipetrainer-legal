@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
 <head>
-<link rel="icon" type="image/png" href="assets/icon.png" />
+<link rel="icon" type="image/png" href="icon.png" />
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 <!-- ============ SEO ============ -->
-<title>SwipeTrainer — Learn to Read Stock Charts | Free Trading Practice Game</title>
-<meta name="description" content="SwipeTrainer is the free game that teaches you to read stock charts. Swipe bullish or bearish on 800 hand-picked real historical setups, see what happened, and train your eye for trading — candlestick patterns, breakouts, swing setups. Download on Google Play." />
+<title>SwipeTrainer: Learn to Read Stock Charts | Free Trading Practice Game</title>
+<meta name="description" content="SwipeTrainer is the free game that teaches you to read stock charts. Swipe bullish or bearish on 800 hand-picked real historical setups, see what happened, and train your eye for trading, with candlestick patterns, breakouts and swing setups. Download on iPhone and Android." />
 <meta name="keywords" content="trading game, learn to trade, learn stock trading, stock trading game, swing trading practice, day trading game, candlestick patterns, chart reading app, technical analysis practice, read stock charts, stock market game, trading simulator, candlestick chart practice" />
 <meta name="author" content="Tomer Aminizar" />
 <meta name="robots" content="index, follow" />
@@ -15,15 +15,15 @@
 
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="SwipeTrainer" />
-<meta property="og:title" content="SwipeTrainer — Learn to Read Stock Charts by Playing" />
+<meta property="og:title" content="SwipeTrainer: Learn to Read Stock Charts by Playing" />
 <meta property="og:description" content="Swipe bullish or bearish on 800 real historical charts, see what actually happened, and train your trading eye in minutes a day. Free on iPhone and Android." />
 <meta property="og:url" content="https://7atomer-rgb.github.io/swipetrainer-legal/" />
-<meta property="og:image" content="https://7atomer-rgb.github.io/swipetrainer-legal/assets/og-image.png" />
+<meta property="og:image" content="https://7atomer-rgb.github.io/swipetrainer-legal/og-image.png" />
 
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="SwipeTrainer — Learn to Read Stock Charts by Playing" />
+<meta name="twitter:title" content="SwipeTrainer: Learn to Read Stock Charts by Playing" />
 <meta name="twitter:description" content="Swipe bullish or bearish on real historical charts, see what happened, and train your trading eye. Free on Google Play." />
-<meta name="twitter:image" content="https://7atomer-rgb.github.io/swipetrainer-legal/assets/og-image.png" />
+<meta name="twitter:image" content="https://7atomer-rgb.github.io/swipetrainer-legal/og-image.png" />
 
 <meta name="apple-itunes-app" content="app-id=6819831931" />
 <meta name="theme-color" content="#0a0c10" />
@@ -54,15 +54,15 @@
     { "@type": "Question", "name": "Is SwipeTrainer free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. SwipeTrainer is free to download and play on iPhone and Android, supported by ads." } },
     { "@type": "Question", "name": "Is there a game to learn stock trading?", "acceptedAnswer": { "@type": "Answer", "text": "SwipeTrainer is a game built to teach chart reading. You swipe bullish or bearish on real historical stock and crypto charts, then see what actually happened and why." } },
     { "@type": "Question", "name": "Do I need trading experience to use it?", "acceptedAnswer": { "@type": "Answer", "text": "No. A guided intro teaches the core patterns in under two minutes, and difficulty scales from beginner to advanced as you improve." } },
-    { "@type": "Question", "name": "How do I practice reading candlestick charts?", "acceptedAnswer": { "@type": "Answer", "text": "SwipeTrainer gives you hundreds of real candlestick setups to call bullish or bearish, with instant feedback and the key signal explained on every one — the repetition builds pattern recognition." } },
-    { "@type": "Question", "name": "Is SwipeTrainer good for swing trading?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Setups span breakouts, breakdowns, flags, double tops and more over multi-day horizons — the patterns swing traders watch for." } },
+    { "@type": "Question", "name": "How do I practice reading candlestick charts?", "acceptedAnswer": { "@type": "Answer", "text": "SwipeTrainer gives you hundreds of real candlestick setups to call bullish or bearish, with instant feedback and the key signal explained on every one. The repetition builds pattern recognition." } },
+    { "@type": "Question", "name": "Is SwipeTrainer good for swing trading?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Setups span breakouts, breakdowns, flags, double tops and more over multi-day horizons. These are the patterns swing traders watch for." } },
     { "@type": "Question", "name": "Does SwipeTrainer give financial advice?", "acceptedAnswer": { "@type": "Answer", "text": "No. SwipeTrainer is an educational training game using historical data. It is not financial advice and does not offer real trading." } }
   ]
 }
 </script>
 
 <style>
-/* ============ Tokens — sharp, neutral graphite ground; green as accent ============ */
+/* ============ Tokens: sharp, neutral graphite ground, green as accent ============ */
 :root{
   --bg:#0a0c10; --bg-soft:#0e1116;
   --surface:#12161c; --surface-2:#171d25; --line:rgba(255,255,255,.08); --line-hi:rgba(255,255,255,.16);
@@ -108,6 +108,13 @@ section{padding:96px 24px}
 .btn-play span{display:block;text-align:left;line-height:1.1}
 .btn-play small{display:block;font-family:"IBM Plex Mono";font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
 .btn-play b{font-size:1.05rem}
+
+.store-badge{display:inline-flex;align-items:center;line-height:0;transition:transform .14s,filter .14s}
+.store-badge:hover{transform:translateY(-2px);filter:brightness(1.12)}
+.store-badge img{display:block}
+.store-apple img{height:50px;width:auto}
+.store-google img{height:74px;width:auto;margin:-12px -12px}
+.store-row{align-items:center;gap:14px}
 .btn-ghost{background:var(--surface);color:var(--muted);border:1px solid var(--line);cursor:default}
 .btn-ghost svg{width:22px;height:22px}
 .btn-ghost span{display:block;text-align:left;line-height:1.1}
@@ -139,6 +146,8 @@ header{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:co
 .streak{position:absolute;top:8px;left:6px;z-index:3;display:flex;align-items:center;gap:6px;font-family:"IBM Plex Mono";font-weight:600;font-size:.72rem;padding:8px 13px;border-radius:10px;background:var(--surface);border:1px solid var(--line);color:var(--gold);box-shadow:var(--shadow)}
 .phone{width:302px;background:#1a1c22;border-radius:46px;padding:9px;box-shadow:var(--shadow),0 0 0 1px rgba(255,255,255,.06);position:relative}
 .screen{background:#0a0c10;border-radius:38px;overflow:hidden;padding:12px;position:relative;min-height:642px;display:flex}
+.hero-screen{padding:0;min-height:0;aspect-ratio:576/1302;background:#0a0a0a}
+.hero-video{display:block;width:100%;height:100%;object-fit:cover}
 .card{background:var(--surface);border:1px solid var(--line);border-top-color:var(--line-hi);border-radius:28px;padding:22px 20px;position:relative;flex:1;display:flex;flex-direction:column}
 .card .row{display:flex;justify-content:space-between;align-items:flex-start}
 .tk{font-family:"Sora";font-size:1.7rem;font-weight:800;letter-spacing:-.02em}
@@ -263,14 +272,8 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
         <h1>Read the chart <em>before</em> the move happens.</h1>
         <p class="lede">SwipeTrainer is the game that trains your trading eye. Call bullish or bearish on 800 real historical charts, then see exactly what happened next.</p>
         <div class="store-row">
-          <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.tomeraminizar.swipetrainer">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3.5v17a1 1 0 0 0 1.5.87l14-8.5a1 1 0 0 0 0-1.74l-14-8.5A1 1 0 0 0 3 3.5Z"/></svg>
-            <span><small>Get it on</small><b>Google Play</b></span>
-          </a>
-          <a class="btn btn-play btn-app" href="https://apps.apple.com/app/swipetrainer-stock-charts/id6819831931">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.4 0-2.8.9-3.5 2.2-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.5 2.2 2.6 2.1 1-.04 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.6 1.1-.02 1.8-1 2.5-2 .8-1.2 1.1-2.3 1.1-2.4-.02-.01-2.1-.8-2.1-3.1ZM14.3 5.9c.6-.7 1-1.7.9-2.7-.8 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6.9.1 1.8-.5 2.5-1.2Z"/></svg>
-            <span><small>Download on the</small><b>App Store</b></span>
-          </a>
+          <a class="store-badge store-google" href="https://play.google.com/store/apps/details?id=com.tomeraminizar.swipetrainer" aria-label="Get it on Google Play"><img src="badge-google-play.png" alt="Get it on Google Play" /></a>
+          <a class="store-badge store-apple" href="https://apps.apple.com/app/swipetrainer-stock-charts/id6819831931" aria-label="Download on the App Store"><img src="badge-app-store.svg" alt="Download on the App Store" /></a>
         </div>
         <div class="trust">
           <span><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>800 real setups</span>
@@ -279,21 +282,10 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
       </div>
 
       <div class="phone-wrap">
-        <div class="phone"><div class="screen">
-          <div class="card" id="demoCard">
-            <div class="row">
-              <div><div class="tk">NVDA</div><div class="co">NVIDIA Corp</div></div>
-              <div class="pill">BREAKOUT</div>
-            </div>
-            <div class="chartArea"><svg id="chart" viewBox="0 0 262 250" aria-label="Interactive candlestick demo"></svg></div>
-            <div class="prompt" id="prompt">Your call — try it 👇</div>
-            <div class="swipe">
-              <button class="sw-bear" id="bearBtn" type="button">← BEARISH</button>
-              <button class="sw-bull" id="bullBtn" type="button">BULLISH →</button>
-            </div>
-            <div class="verdict" id="verdict"></div>
-          </div>
-          <div class="finger" id="finger">👆</div>
+        <div class="phone"><div class="screen hero-screen">
+          <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg" aria-label="SwipeTrainer in action: a 1v1 duel with real charts">
+            <source src="hero.mp4" type="video/mp4" />
+          </video>
         </div></div>
       </div>
     </div>
@@ -318,12 +310,12 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
   <section class="steps">
     <div class="wrap">
       <div class="section-head reveal">
-        <h2>Learn the way traders actually learn — by reps</h2>
+        <h2>Learn the way traders actually learn: by reps</h2>
         <p>Three seconds a chart. Real feedback every time.</p>
       </div>
       <div class="step-grid">
-        <div class="step reveal"><div class="n">STEP 01</div><h3>See a real chart</h3><p>Every setup is a genuine moment from market history — the same chart a trader saw that day, frozen right before the move.</p></div>
-        <div class="step reveal"><div class="n">STEP 02</div><h3>Make your call</h3><p>Swipe right for bullish, left for bearish. Trust the pattern, the volume, the momentum — and commit.</p></div>
+        <div class="step reveal"><div class="n">STEP 01</div><h3>See a real chart</h3><p>Every setup is a genuine moment from market history. It's the same chart a trader saw that day, frozen right before the move.</p></div>
+        <div class="step reveal"><div class="n">STEP 02</div><h3>Make your call</h3><p>Swipe right for bullish, left for bearish. Trust the pattern, the volume and the momentum, and commit.</p></div>
         <div class="step reveal"><div class="n">STEP 03</div><h3>See what happened</h3><p>The chart fills in candle by candle to reveal the real outcome, the exact move, and the key signal to spot next time.</p></div>
       </div>
     </div>
@@ -351,7 +343,7 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
         </div>
         <div class="feat reveal">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h11" stroke-width="2" stroke-linecap="round"/></svg></div>
-          <h3>Pattern library</h3><p>Study breakouts, breakdowns, double tops, head-and-shoulders and more — each with its real historical hit rate.</p>
+          <h3>Pattern library</h3><p>Study breakouts, breakdowns, double tops, head-and-shoulders and more, each with its real historical hit rate.</p>
         </div>
         <div class="feat reveal">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20V11m5 9V5m5 15v-6m5 6V8" stroke-width="2" stroke-linecap="round"/></svg></div>
@@ -378,12 +370,12 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
     <div class="wrap">
       <div class="reveal">
         <h2>Stop watching videos.<br>Start training your eye.</h2>
-        <p>You don't learn to read a chart by reading about it. You learn it the way pros do — thousands of reps, instant feedback, and the discipline to make a call before you know the answer.</p>
+        <p>You don't learn to read a chart by reading about it. You learn it the way pros do: thousands of reps, instant feedback and the discipline to make a call before you know the answer.</p>
         <p>SwipeTrainer turns that grind into a game you'll actually keep open.</p>
       </div>
       <div class="stat-row reveal">
         <div class="stat"><b>800</b><small>hand-picked real setups</small></div>
-        <div class="stat"><b>~10s</b><small>per chart — train anywhere</small></div>
+        <div class="stat"><b>~10s</b><small>per chart, train anywhere</small></div>
         <div class="stat"><b>100%</b><small>real market data, no fakes</small></div>
       </div>
     </div>
@@ -395,10 +387,10 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
       <h2 class="reveal">Questions traders ask</h2>
       <div class="faq-list">
         <details class="reveal"><summary>Is SwipeTrainer free?</summary><p>Yes. It's free to download and play on iPhone and Android, supported by ads.</p></details>
-        <details class="reveal"><summary>Is this a game to learn stock trading?</summary><p>Exactly. SwipeTrainer is a game built to teach chart reading. You swipe bullish or bearish on real historical stock and crypto charts, then see what actually happened and why — building the pattern recognition that trading depends on.</p></details>
+        <details class="reveal"><summary>Is this a game to learn stock trading?</summary><p>Exactly. SwipeTrainer is a game built to teach chart reading. You swipe bullish or bearish on real historical stock and crypto charts, then see what actually happened and why, building the pattern recognition that trading depends on.</p></details>
         <details class="reveal"><summary>Do I need trading experience?</summary><p>Not at all. A guided intro teaches the core patterns in under two minutes, and the difficulty scales from beginner to advanced as you improve.</p></details>
         <details class="reveal"><summary>How do I practice reading candlestick charts?</summary><p>SwipeTrainer gives you hundreds of real candlestick setups to call, with instant feedback and the key signal explained on every one. That repetition is the fastest way to internalize what candlestick patterns are telling you.</p></details>
-        <details class="reveal"><summary>Is it good for swing trading?</summary><p>Yes. Setups span breakouts, breakdowns, flags, double tops and more over multi-day horizons — the exact patterns swing traders watch for.</p></details>
+        <details class="reveal"><summary>Is it good for swing trading?</summary><p>Yes. Setups span breakouts, breakdowns, flags, double tops and more over multi-day horizons. These are the exact patterns swing traders watch for.</p></details>
         <details class="reveal"><summary>Is it available on iPhone?</summary><p>Yes. SwipeTrainer is on the App Store for iPhone and on Google Play for Android.</p></details>
         <details class="reveal"><summary>Does SwipeTrainer give financial advice?</summary><p>No. SwipeTrainer is an educational training game using historical market data. It is not financial advice and does not offer real trading. Always do your own research.</p></details>
       </div>
@@ -425,14 +417,8 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
       <h2 class="reveal">Can you read the chart before the move?</h2>
       <p class="reveal">Find out in your first 30 seconds. Free on iPhone and Android.</p>
       <div class="store-row reveal">
-        <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.tomeraminizar.swipetrainer">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3.5v17a1 1 0 0 0 1.5.87l14-8.5a1 1 0 0 0 0-1.74l-14-8.5A1 1 0 0 0 3 3.5Z"/></svg>
-          <span><small>Get it on</small><b>Google Play</b></span>
-        </a>
-        <a class="btn btn-play btn-app" href="https://apps.apple.com/app/swipetrainer-stock-charts/id6819831931">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.4 0-2.8.9-3.5 2.2-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.5 2.2 2.6 2.1 1-.04 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.6 1.1-.02 1.8-1 2.5-2 .8-1.2 1.1-2.3 1.1-2.4-.02-.01-2.1-.8-2.1-3.1ZM14.3 5.9c.6-.7 1-1.7.9-2.7-.8 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6.9.1 1.8-.5 2.5-1.2Z"/></svg>
-          <span><small>Download on the</small><b>App Store</b></span>
-        </a>
+        <a class="store-badge store-google" href="https://play.google.com/store/apps/details?id=com.tomeraminizar.swipetrainer" aria-label="Get it on Google Play"><img src="badge-google-play.png" alt="Get it on Google Play" /></a>
+        <a class="store-badge store-apple" href="https://apps.apple.com/app/swipetrainer-stock-charts/id6819831931" aria-label="Download on the App Store"><img src="badge-app-store.svg" alt="Download on the App Store" /></a>
       </div>
     </div>
   </section>
@@ -458,95 +444,13 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
 </footer>
 
 <script>
-// ===== Interactive one-swipe teaser: real answer is BULLISH (+18%). =====
-(function(){
-  var svg=document.getElementById('chart');
-  if(!svg) return;
-  var ns='http://www.w3.org/2000/svg';
-  var W=262,H=250,pad=10;
-  var before=[120,121,119,122,120,123,121,120,118,121,120,122,121,123];
-  var after=[125,129,133,138,143,148,154];
-  var all=before.concat(after);
-  var lo=Math.min.apply(null,all)-4, hi=Math.max.apply(null,all)+6;
-  var slot=(W-16)/all.length;
-  function y(v){return pad+(H-2*pad)*(1-(v-lo)/(hi-lo));}
-  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-  var afterEls=[];
-  for(var g=0;g<4;g++){var ln=document.createElementNS(ns,'line');var yy=pad+(H-2*pad)*g/3;ln.setAttribute('x1',0);ln.setAttribute('x2',W);ln.setAttribute('y1',yy);ln.setAttribute('y2',yy);ln.setAttribute('stroke','rgba(255,255,255,.06)');svg.appendChild(ln);}
-  function candle(i,v,prev){
-    var up=v>=prev,col=up?'#12cf86':'#f04458',x=8+i*slot+slot/2,bw=slot*0.6;
-    var top=y(Math.max(prev,v)),bot=y(Math.min(prev,v));
-    var wick=document.createElementNS(ns,'line');
-    wick.setAttribute('x1',x);wick.setAttribute('x2',x);wick.setAttribute('y1',y(Math.max(prev,v)+2));wick.setAttribute('y2',y(Math.min(prev,v)-2));
-    wick.setAttribute('stroke',col);wick.setAttribute('stroke-width','1.4');
-    var r=document.createElementNS(ns,'rect');
-    r.setAttribute('x',x-bw/2);r.setAttribute('y',top);r.setAttribute('width',bw);r.setAttribute('height',Math.max(bot-top,2));r.setAttribute('rx','1.6');r.setAttribute('fill',col);
-    var grp=document.createElementNS(ns,'g');grp.appendChild(wick);grp.appendChild(r);svg.appendChild(grp);
-    return grp;
-  }
-  all.forEach(function(v,i){var prev=i?all[i-1]:v-1;var gg=candle(i,v,prev);if(i>=before.length){gg.style.transition='opacity .28s';gg.style.opacity='0';afterEls.push(gg);}});
-  var mx=8+before.length*slot;
-  var ml=document.createElementNS(ns,'line');
-  ml.setAttribute('x1',mx);ml.setAttribute('x2',mx);ml.setAttribute('y1',2);ml.setAttribute('y2',H-2);
-  ml.setAttribute('stroke','#12cf86');ml.setAttribute('stroke-width','1.4');ml.setAttribute('stroke-dasharray','4 3');ml.setAttribute('opacity','0');ml.style.transition='opacity .3s';svg.appendChild(ml);
-
-  var prompt=document.getElementById('prompt'),swipe=document.querySelector('.swipe'),
-      verdict=document.getElementById('verdict'),finger=document.getElementById('finger'),
-      bull=document.getElementById('bullBtn'),bear=document.getElementById('bearBtn');
-  var done=false,autoT;
-
-  function revealChart(){ml.setAttribute('opacity','.55');afterEls.forEach(function(gg,i){setTimeout(function(){gg.style.opacity='1';},i*120);});}
-
-  function resolve(choice){ // 'bullish' | 'bearish'
-    if(done) return; done=true; clearTimeout(autoT);
-    var right=choice==='bullish';
-    (choice==='bullish'?bull:bear).classList.add('flash');
-    prompt.style.opacity='0';
-    revealChart();
-    setTimeout(function(){
-      swipe.style.display='none';prompt.style.display='none';
-      verdict.innerHTML=
-        '<div class="v" style="color:'+(right?'#12cf86':'#f04458')+'">'+(right?'✓ YOU CALLED IT':'✗ NOT QUITE — IT RAN')+'</div>'+
-        '<div class="m" style="color:#12cf86">+18%</div>'+
-        '<a class="cta" href="'+(/iPhone|iPad|iPod/.test(navigator.userAgent)?'https://apps.apple.com/app/swipetrainer-stock-charts/id6819831931':'https://play.google.com/store/apps/details?id=com.tomeraminizar.swipetrainer')+'">Play the full game free →</a>';
-      verdict.classList.add('show');
-    },780);
-  }
-  bull.addEventListener('click',function(){resolve('bullish');});
-  bear.addEventListener('click',function(){resolve('bearish');});
-
-  // Auto-demo the swipe if the visitor doesn't interact (nudge, then reveal).
-  if(!reduce){
-    finger.style.opacity='0';
-    autoT=setTimeout(function(){
-      if(done) return;
-      finger.style.transition='opacity .3s';finger.style.opacity='.95';
-      finger.style.transition='opacity .3s, transform .6s cubic-bezier(.4,0,.4,1)';
-      requestAnimationFrame(function(){finger.style.transform='translate(-30px,-26px)';});
-      bull.classList.add('flash');
-      setTimeout(function(){finger.style.opacity='0';},900);
-      setTimeout(function(){resolve('bullish');},1000);
-    },3600);
-  }
-})();
-
-// scroll reveal
-(function(){
-  var els=document.querySelectorAll('.reveal');
-  if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in');});return;}
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});
-  els.forEach(function(e){io.observe(e);});
-})();
-</script>
-
-<script>
 // Put the visitor's own store button first (iPhone -> App Store, Android -> Google Play).
 (function(){
   var ua=navigator.userAgent||"", ios=/iPhone|iPad|iPod/.test(ua);
   if(!ios) return;
   var top=document.querySelector('header .btn-play'); if(top) top.href='https://apps.apple.com/app/swipetrainer-stock-charts/id6819831931';
   document.querySelectorAll('.store-row').forEach(function(row){
-    var app=row.querySelector('.btn-app'); if(app) row.insertBefore(app,row.firstChild);
+    var app=row.querySelector('.store-apple'); if(app) row.insertBefore(app,row.firstChild);
   });
 })();
 </script>
