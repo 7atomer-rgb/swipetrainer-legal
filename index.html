@@ -22,7 +22,7 @@
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="SwipeTrainer: Learn to Read Stock Charts by Playing" />
-<meta name="twitter:description" content="Swipe bullish or bearish on real historical charts, see what happened, and train your trading eye. Free on Google Play." />
+<meta name="twitter:description" content="Swipe bullish or bearish on real historical charts, see what happened, and train your trading eye. Free on iPhone and Android." />
 <meta name="twitter:image" content="https://swipetrainer.com/og-image.png" />
 
 <meta name="apple-itunes-app" content="app-id=6819831931" />
@@ -51,6 +51,8 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    { "@type": "Question", "name": "What is technical analysis?", "acceptedAnswer": { "@type": "Answer", "text": "It is a way of reading the market from price and volume charts instead of company financials. Traders look for patterns such as breakouts, flags and double tops to judge whether price is more likely to rise or fall. No pattern works every time, so it is about reading the odds." } },
+    { "@type": "Question", "name": "How do I learn chart patterns?", "acceptedAnswer": { "@type": "Answer", "text": "Start with the main families (breakouts, breakdowns, flags, double tops and bottoms, head and shoulders), then practice on many real charts and check what happened after each call. SwipeTrainer is built around that loop." } },
     { "@type": "Question", "name": "Is SwipeTrainer free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. SwipeTrainer is free to download and play on iPhone and Android, supported by ads." } },
     { "@type": "Question", "name": "Is there a game to learn stock trading?", "acceptedAnswer": { "@type": "Answer", "text": "SwipeTrainer is a game built to teach chart reading. You swipe bullish or bearish on real historical stock and crypto charts, then see what actually happened and why." } },
     { "@type": "Question", "name": "Do I need trading experience to use it?", "acceptedAnswer": { "@type": "Answer", "text": "No. A guided intro teaches the core patterns in under two minutes, and difficulty scales from beginner to advanced as you improve." } },
@@ -209,6 +211,20 @@ header{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:co
 .stat{flex:1;min-width:120px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
 .stat b{font-family:"Sora";font-size:2rem;font-weight:800;color:var(--bull);display:block;letter-spacing:-.02em}
 .stat small{color:var(--muted);font-size:.82rem;font-weight:600}
+
+
+/* ============ LEARN (SEO guide) ============ */
+.learn{border-top:1px solid var(--line)}
+.learn .intro{max-width:760px;margin:0 auto 44px;text-align:center}
+.learn .intro h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin-bottom:16px}
+.learn .intro p{color:var(--muted);font-size:1.06rem;font-weight:500;margin-bottom:12px}
+.learn-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.learn-card{background:var(--surface);border:1px solid var(--line);border-top-color:var(--line-hi);border-radius:var(--r);padding:28px}
+.learn-card h3{font-size:1.2rem;margin-bottom:10px;font-weight:700}
+.learn-card p{color:var(--muted);font-size:.98rem;font-weight:500;margin-bottom:10px}
+.learn-card p:last-child{margin-bottom:0}
+.learn-note{max-width:760px;margin:36px auto 0;text-align:center;color:var(--faint);font-size:.9rem;font-weight:500}
+@media (max-width:900px){.learn-grid{grid-template-columns:1fr}}
 
 /* ============ FAQ ============ */
 .faq h2{text-align:center;font-size:clamp(1.9rem,3.5vw,2.6rem);margin-bottom:38px}
@@ -381,11 +397,56 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
     </div>
   </section>
 
+  <!-- LEARN -->
+  <section class="learn" id="learn">
+    <div class="wrap">
+      <div class="intro reveal">
+        <h2>Technical trading, in plain English</h2>
+        <p>Technical analysis means making trading decisions from the chart: price, volume and the shapes they form over time. It ignores the company's accounts and asks a simpler question. What are buyers and sellers doing right now, and what did they do the last time the chart looked like this?</p>
+        <p>Nobody gets every call right, and no pattern works every time. The goal is to read the odds better than you did last month. That comes from seeing a lot of charts.</p>
+      </div>
+      <div class="learn-grid">
+        <div class="learn-card reveal">
+          <h3>How to read a candlestick chart</h3>
+          <p>Each candle is one period, such as a day. It shows where price opened, how high and low it went, and where it closed. A green body means it closed higher than it opened. A red body means it closed lower.</p>
+          <p>One candle says little. A run of them shows who is in control: long green candles with small pullbacks point to steady buying, a string of red ones to pressure.</p>
+        </div>
+        <div class="learn-card reveal">
+          <h3>Common stock chart patterns</h3>
+          <p>Traders keep coming back to a short list: breakouts and breakdowns, flags, double tops and double bottoms, head and shoulders, gaps, pullbacks and reversals. Each one is a picture of a fight between buyers and sellers.</p>
+          <p>SwipeTrainer sorts its charts into these families, so you can practice the ones you keep missing.</p>
+        </div>
+        <div class="learn-card reveal">
+          <h3>Why volume matters</h3>
+          <p>Volume is how many shares changed hands. It tells you how much conviction sits behind a move. A breakout on heavy volume is more convincing than one on thin volume, and a pullback where volume dries up is often just a pause.</p>
+          <p>When you call a chart in the app, the volume bars are right there under the price.</p>
+        </div>
+        <div class="learn-card reveal">
+          <h3>Trend, support and resistance</h3>
+          <p>Price tends to stall at levels where it turned before. A floor where buyers stepped in is support. A ceiling where sellers did is resistance. When price pushes through one, that is often the signal people watch.</p>
+          <p>It also helps to know the market. The dotted SPY and QQQ lines on each chart show whether the stock is moving with the market or on its own.</p>
+        </div>
+        <div class="learn-card reveal">
+          <h3>Swing trading and day trading</h3>
+          <p>Swing traders hold for days or weeks and care about patterns like flags, pullbacks and breakouts. Day traders work inside a single session. The charts in SwipeTrainer play out over days, so they suit swing trading practice best, but the skill of reading price and volume carries over.</p>
+        </div>
+        <div class="learn-card reveal">
+          <h3>How to actually get better</h3>
+          <p>Reading about patterns only gets you so far. You get faster by committing to a call before you know the answer, then checking what really happened. A wrong call that you understand teaches more than a lucky right one.</p>
+          <p>That is the whole idea behind the app: real charts, quick calls, instant feedback.</p>
+        </div>
+      </div>
+      <p class="learn-note">SwipeTrainer is an educational game that uses historical market data. It is not financial advice and does not offer real trading.</p>
+    </div>
+  </section>
+
   <!-- FAQ -->
   <section class="faq">
     <div class="wrap">
       <h2 class="reveal">Questions traders ask</h2>
       <div class="faq-list">
+        <details class="reveal"><summary>What is technical analysis?</summary><p>It is a way of reading the market from price and volume charts instead of company financials. Traders look for patterns such as breakouts, flags and double tops, and use them to judge whether price is more likely to rise or fall. No pattern works every time, so it is about reading the odds.</p></details>
+        <details class="reveal"><summary>How do I learn chart patterns?</summary><p>Start with the main families (breakouts, breakdowns, flags, double tops and bottoms, head and shoulders), then practice on lots of real charts and check what happened after each call. SwipeTrainer is built around exactly that loop.</p></details>
         <details class="reveal"><summary>Is SwipeTrainer free?</summary><p>Yes. It's free to download and play on iPhone and Android, supported by ads.</p></details>
         <details class="reveal"><summary>Is this a game to learn stock trading?</summary><p>Exactly. SwipeTrainer is a game built to teach chart reading. You swipe bullish or bearish on real historical stock and crypto charts, then see what actually happened and why, building the pattern recognition that trading depends on.</p></details>
         <details class="reveal"><summary>Do I need trading experience?</summary><p>Not at all. A guided intro teaches the core patterns in under two minutes, and the difficulty scales from beginner to advanced as you improve.</p></details>
