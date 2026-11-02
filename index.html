@@ -1,64 +1,554 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SwipeTrainer Support</title>
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 40px 24px 80px;
-      line-height: 1.6;
-      color: #1a1a1a;
-      background: #ffffff;
-    }
-    h1 { font-size: 28px; margin-bottom: 4px; }
-    h2 { font-size: 20px; margin-top: 32px; }
-    .sub { color: #666; margin-top: 0; }
-    .card {
-      border: 1px solid #e5e5e5;
-      border-radius: 12px;
-      padding: 20px 24px;
-      margin: 20px 0;
-      background: #fafafa;
-    }
-    a { color: #0a7d4f; }
-  </style>
+<link rel="icon" type="image/png" href="assets/icon.png" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- ============ SEO ============ -->
+<title>SwipeTrainer — Learn to Read Stock Charts | Free Trading Practice Game</title>
+<meta name="description" content="SwipeTrainer is the free game that teaches you to read stock charts. Swipe bullish or bearish on 800 hand-picked real historical setups, see what happened, and train your eye for trading — candlestick patterns, breakouts, swing setups. Download on Google Play." />
+<meta name="keywords" content="trading game, learn to trade, learn stock trading, stock trading game, swing trading practice, day trading game, candlestick patterns, chart reading app, technical analysis practice, read stock charts, stock market game, trading simulator, candlestick chart practice" />
+<meta name="author" content="Tomer Aminizar" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://7atomer-rgb.github.io/swipetrainer-legal/" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="SwipeTrainer" />
+<meta property="og:title" content="SwipeTrainer — Learn to Read Stock Charts by Playing" />
+<meta property="og:description" content="Swipe bullish or bearish on 800 real historical charts, see what actually happened, and train your trading eye in minutes a day. Free on iPhone and Android." />
+<meta property="og:url" content="https://7atomer-rgb.github.io/swipetrainer-legal/" />
+<meta property="og:image" content="https://7atomer-rgb.github.io/swipetrainer-legal/assets/og-image.png" />
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SwipeTrainer — Learn to Read Stock Charts by Playing" />
+<meta name="twitter:description" content="Swipe bullish or bearish on real historical charts, see what happened, and train your trading eye. Free on Google Play." />
+<meta name="twitter:image" content="https://7atomer-rgb.github.io/swipetrainer-legal/assets/og-image.png" />
+
+<meta name="apple-itunes-app" content="app-id=6819831931" />
+<meta name="theme-color" content="#0a0c10" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "SwipeTrainer: Stock Charts",
+  "operatingSystem": "iOS, Android",
+  "applicationCategory": "EducationalApplication",
+  "description": "A game that teaches you to read stock charts. Swipe bullish or bearish on real historical setups, see what happened, and train pattern recognition for trading.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "url": "https://apps.apple.com/app/swipetrainer-stock-charts/id6819831931",
+  "sameAs": ["https://play.google.com/store/apps/details?id=com.tomeraminizar.swipetrainer"],
+  "author": { "@type": "Person", "name": "Tomer Aminizar" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is SwipeTrainer free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. SwipeTrainer is free to download and play on iPhone and Android, supported by ads." } },
+    { "@type": "Question", "name": "Is there a game to learn stock trading?", "acceptedAnswer": { "@type": "Answer", "text": "SwipeTrainer is a game built to teach chart reading. You swipe bullish or bearish on real historical stock and crypto charts, then see what actually happened and why." } },
+    { "@type": "Question", "name": "Do I need trading experience to use it?", "acceptedAnswer": { "@type": "Answer", "text": "No. A guided intro teaches the core patterns in under two minutes, and difficulty scales from beginner to advanced as you improve." } },
+    { "@type": "Question", "name": "How do I practice reading candlestick charts?", "acceptedAnswer": { "@type": "Answer", "text": "SwipeTrainer gives you hundreds of real candlestick setups to call bullish or bearish, with instant feedback and the key signal explained on every one — the repetition builds pattern recognition." } },
+    { "@type": "Question", "name": "Is SwipeTrainer good for swing trading?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Setups span breakouts, breakdowns, flags, double tops and more over multi-day horizons — the patterns swing traders watch for." } },
+    { "@type": "Question", "name": "Does SwipeTrainer give financial advice?", "acceptedAnswer": { "@type": "Answer", "text": "No. SwipeTrainer is an educational training game using historical data. It is not financial advice and does not offer real trading." } }
+  ]
+}
+</script>
+
+<style>
+/* ============ Tokens — sharp, neutral graphite ground; green as accent ============ */
+:root{
+  --bg:#0a0c10; --bg-soft:#0e1116;
+  --surface:#12161c; --surface-2:#171d25; --line:rgba(255,255,255,.08); --line-hi:rgba(255,255,255,.16);
+  --text:#f3f6f9; --muted:#98a2af; --faint:#657080;
+  --bull:#12cf86; --bull-2:#06b06e; --bull-ink:#032417; --bull-soft:rgba(18,207,134,.12);
+  --bear:#f04458; --bear-soft:rgba(240,68,88,.12);
+  --gold:#ffc24a;
+  --r:16px; --maxw:1120px;
+  --shadow:0 24px 60px rgba(0,0,0,.5);
+}
+@media (prefers-color-scheme: light){
+  :root{
+    --bg:#f4f6f9; --bg-soft:#ffffff;
+    --surface:#ffffff; --surface-2:#f2f5f8; --line:rgba(10,20,35,.10); --line-hi:rgba(10,20,35,.06);
+    --text:#0b1017; --muted:#55606f; --faint:#8b94a2;
+    --bull-soft:rgba(6,176,110,.10); --bear-soft:rgba(240,68,88,.10);
+    --shadow:0 24px 54px rgba(20,35,60,.14);
+  }
+}
+:root[data-theme="dark"]{--bg:#0a0c10;--bg-soft:#0e1116;--surface:#12161c;--surface-2:#171d25;--line:rgba(255,255,255,.08);--line-hi:rgba(255,255,255,.16);--text:#f3f6f9;--muted:#98a2af;--faint:#657080;--shadow:0 24px 60px rgba(0,0,0,.5);}
+:root[data-theme="light"]{--bg:#f4f6f9;--bg-soft:#ffffff;--surface:#ffffff;--surface-2:#f2f5f8;--line:rgba(10,20,35,.10);--line-hi:rgba(10,20,35,.06);--text:#0b1017;--muted:#55606f;--faint:#8b94a2;--shadow:0 24px 54px rgba(20,35,60,.14);}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--text);
+  font-family:"Hanken Grotesk",system-ui,-apple-system,sans-serif;
+  line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+.mono{font-family:"IBM Plex Mono",monospace}
+h1,h2,h3{font-family:"Sora",system-ui,sans-serif;line-height:1.06;text-wrap:balance;letter-spacing:-.025em;font-weight:800}
+a{color:inherit;text-decoration:none}
+section{padding:96px 24px}
+.wrap{max-width:var(--maxw);margin:0 auto}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.eyebrow::before{content:"";width:20px;height:1px;background:var(--bull)}
+
+/* ============ Buttons ============ */
+.btn{display:inline-flex;align-items:center;gap:11px;padding:14px 24px;border-radius:12px;font-family:"Sora";font-weight:700;font-size:.98rem;border:none;cursor:pointer;transition:transform .14s,box-shadow .14s,background .14s}
+.btn-play{background:var(--bull);color:var(--bull-ink);box-shadow:0 8px 22px rgba(18,207,134,.28)}
+.btn-play:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(18,207,134,.4)}
+.btn-play svg{width:22px;height:22px}
+.btn-play span{display:block;text-align:left;line-height:1.1}
+.btn-play small{display:block;font-family:"IBM Plex Mono";font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;opacity:.7}
+.btn-play b{font-size:1.05rem}
+.btn-ghost{background:var(--surface);color:var(--muted);border:1px solid var(--line);cursor:default}
+.btn-ghost svg{width:22px;height:22px}
+.btn-ghost span{display:block;text-align:left;line-height:1.1}
+.btn-ghost small{display:block;font-family:"IBM Plex Mono";font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;opacity:.6}
+.btn-ghost b{font-size:1.05rem;color:var(--text)}
+
+/* ============ Nav ============ */
+header{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:color-mix(in srgb,var(--bg) 80%,transparent);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;max-width:var(--maxw);margin:0 auto;padding:14px 24px}
+.brand{display:flex;align-items:center;gap:10px;font-family:"Sora";font-weight:800;font-size:1.12rem;letter-spacing:-.02em}
+.logo{width:32px;height:32px;border-radius:9px;background:var(--bull);display:grid;place-items:center;box-shadow:0 4px 14px rgba(18,207,134,.35)}
+.logo svg{width:19px;height:19px}
+.nav .btn{padding:10px 18px;font-size:.9rem}
+
+/* ============ Hero ============ */
+.hero{position:relative;padding:76px 24px 68px;overflow:hidden}
+.hero::before{content:"";position:absolute;width:760px;height:560px;right:-120px;top:-140px;background:radial-gradient(closest-side,rgba(18,207,134,.16),transparent 72%);pointer-events:none;filter:blur(6px)}
+.hero-grid{position:relative;max-width:var(--maxw);margin:0 auto;display:grid;grid-template-columns:1.02fr .98fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.7rem,5.7vw,4.4rem);margin:22px 0 20px;font-weight:800}
+.hero h1 em{font-style:normal;color:var(--bull)}
+.lede{font-size:1.18rem;color:var(--muted);max-width:34ch;font-weight:500}
+.store-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.trust{margin-top:22px;display:flex;gap:22px;flex-wrap:wrap;color:var(--faint);font-size:.84rem;font-weight:600;font-family:"IBM Plex Mono"}
+.trust span{display:flex;align-items:center;gap:8px}
+.trust svg{width:15px;height:15px;stroke:var(--bull)}
+
+/* phone / interactive demo */
+.phone-wrap{display:flex;justify-content:center;position:relative}
+.streak{position:absolute;top:8px;left:6px;z-index:3;display:flex;align-items:center;gap:6px;font-family:"IBM Plex Mono";font-weight:600;font-size:.72rem;padding:8px 13px;border-radius:10px;background:var(--surface);border:1px solid var(--line);color:var(--gold);box-shadow:var(--shadow)}
+.phone{width:302px;background:#1a1c22;border-radius:46px;padding:9px;box-shadow:var(--shadow),0 0 0 1px rgba(255,255,255,.06);position:relative}
+.screen{background:#0a0c10;border-radius:38px;overflow:hidden;padding:12px;position:relative;min-height:642px;display:flex}
+.card{background:var(--surface);border:1px solid var(--line);border-top-color:var(--line-hi);border-radius:28px;padding:22px 20px;position:relative;flex:1;display:flex;flex-direction:column}
+.card .row{display:flex;justify-content:space-between;align-items:flex-start}
+.tk{font-family:"Sora";font-size:1.7rem;font-weight:800;letter-spacing:-.02em}
+.co{font-size:.78rem;color:var(--muted);font-weight:500}
+.pill{font-family:"IBM Plex Mono";font-size:.58rem;font-weight:600;padding:6px 10px;border-radius:8px;background:var(--bull-soft);color:var(--bull);letter-spacing:.06em}
+.chartArea{flex:1;display:flex;align-items:center;justify-content:center;margin:16px 0}
+#chart{width:100%;height:auto;display:block}
+.prompt{text-align:center;font-family:"Sora";font-weight:700;font-size:.86rem;color:var(--muted);margin:0 0 12px;transition:opacity .3s}
+.swipe{display:flex;gap:9px}
+.swipe button{flex:1;padding:14px 0;border-radius:12px;font-family:"Sora";font-weight:700;font-size:.82rem;color:#fff;border:none;cursor:pointer;transition:transform .15s,box-shadow .15s,filter .15s}
+.swipe button:hover{transform:translateY(-1px)}
+.sw-bear{background:var(--bear)}
+.sw-bull{background:var(--bull);color:var(--bull-ink)}
+.swipe button.flash{box-shadow:0 0 0 3px rgba(18,207,134,.4);filter:brightness(1.08)}
+.verdict{margin-top:12px;text-align:center;opacity:0;height:0;overflow:hidden;transition:opacity .35s}
+.verdict.show{opacity:1;height:auto;margin-top:14px}
+.verdict .v{font-family:"IBM Plex Mono";font-weight:600;font-size:.72rem;letter-spacing:.06em}
+.verdict .m{font-family:"Sora";font-weight:800;font-size:1.5rem;margin-top:2px}
+.verdict .cta{display:inline-flex;align-items:center;gap:6px;margin-top:12px;font-family:"Sora";font-weight:700;font-size:.8rem;color:var(--bull);cursor:pointer}
+.finger{position:absolute;right:46px;bottom:150px;font-size:2rem;z-index:4;opacity:0;pointer-events:none;filter:drop-shadow(0 3px 5px rgba(0,0,0,.5))}
+
+/* ============ Section heads ============ */
+.section-head{text-align:center;margin-bottom:52px}
+.section-head h2{font-size:clamp(1.9rem,3.6vw,2.7rem)}
+.section-head p{color:var(--muted);margin-top:12px;font-size:1.05rem;font-weight:500}
+
+/* ============ Audience ============ */
+.who{border-top:1px solid var(--line)}
+.who h2{font-size:1.7rem;text-align:center;margin-bottom:8px}
+.who p.sub{text-align:center;color:var(--muted);margin-bottom:32px;font-weight:500}
+.chips{display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.chip{padding:10px 18px;border-radius:10px;border:1px solid var(--line);background:var(--surface);font-size:.92rem;font-weight:600}
+.chip b{color:var(--bull);font-weight:700}
+
+/* ============ Steps ============ */
+.steps{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-soft)}
+.step-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.step{background:var(--surface);border:1px solid var(--line);border-top-color:var(--line-hi);border-radius:var(--r);padding:30px}
+.step .n{font-family:"IBM Plex Mono";font-size:.78rem;font-weight:600;color:var(--bull);letter-spacing:.1em}
+.step h3{font-size:1.28rem;margin:12px 0 8px;font-weight:700}
+.step p{color:var(--muted);font-size:.96rem;font-weight:500}
+
+/* ============ Features ============ */
+.feat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.feat{background:var(--surface);border:1px solid var(--line);border-top-color:var(--line-hi);border-radius:var(--r);padding:26px;grid-column:span 2}
+.feat:nth-child(4){grid-column:span 3}
+.feat:nth-child(5){grid-column:span 3}
+.feat .ic{width:46px;height:46px;border-radius:12px;background:var(--bull-soft);display:grid;place-items:center;margin-bottom:16px}
+.feat .ic svg{width:24px;height:24px;stroke:var(--bull)}
+.feat h3{font-size:1.18rem;margin-bottom:7px;font-weight:700}
+.feat p{color:var(--muted);font-size:.95rem;font-weight:500}
+
+/* ============ Why ============ */
+.why{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--bg-soft)}
+.why .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.why h2{font-size:clamp(1.9rem,3.5vw,2.6rem);margin-bottom:18px}
+.why p{color:var(--muted);font-size:1.06rem;margin-bottom:16px;font-weight:500}
+.stat-row{display:flex;gap:14px;flex-wrap:wrap}
+.stat{flex:1;min-width:120px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.stat b{font-family:"Sora";font-size:2rem;font-weight:800;color:var(--bull);display:block;letter-spacing:-.02em}
+.stat small{color:var(--muted);font-size:.82rem;font-weight:600}
+
+/* ============ FAQ ============ */
+.faq h2{text-align:center;font-size:clamp(1.9rem,3.5vw,2.6rem);margin-bottom:38px}
+.faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:2px 22px}
+details[open]{border-color:rgba(18,207,134,.35)}
+summary{list-style:none;cursor:pointer;padding:18px 0;font-family:"Sora";font-weight:700;font-size:1.04rem;display:flex;justify-content:space-between;align-items:center;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:"IBM Plex Mono";color:var(--bull);font-size:1.4rem;line-height:1;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);padding:0 0 20px;font-size:.98rem;font-weight:500}
+
+/* ============ Final CTA ============ */
+.final .wrap{position:relative;text-align:center;background:var(--surface);border:1px solid var(--line);border-top-color:var(--line-hi);border-radius:22px;padding:60px 32px;overflow:hidden}
+.final .wrap::before{content:"";position:absolute;width:600px;height:300px;left:50%;bottom:-160px;transform:translateX(-50%);background:radial-gradient(closest-side,rgba(18,207,134,.14),transparent 70%)}
+.final h2{position:relative;font-size:clamp(2rem,4.4vw,3rem);margin-bottom:14px}
+.final p{position:relative;color:var(--muted);font-size:1.12rem;margin-bottom:28px;font-weight:500}
+.final .store-row{position:relative;justify-content:center}
+
+/* ============ Footer ============ */
+footer{border-top:1px solid var(--line);padding:46px 24px}
+.foot{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;color:var(--faint);font-size:.88rem;font-weight:500}
+.foot a{color:var(--muted);margin-right:18px}
+.foot a:hover{color:var(--bull)}
+.disclaimer{max-width:var(--maxw);margin:24px auto 0;font-size:.78rem;color:var(--faint);line-height:1.6;border-top:1px solid var(--line);padding-top:22px}
+
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.finger{display:none}}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:44px;text-align:center}
+  .lede{max-width:none}.store-row,.trust{justify-content:center}
+  .phone-wrap{order:-1}
+  .step-grid{grid-template-columns:1fr}
+  .feat-grid{grid-template-columns:1fr}
+  .feat,.feat:nth-child(4),.feat:nth-child(5){grid-column:auto}
+  .why .wrap{grid-template-columns:1fr;gap:32px}
+}
+</style>
 </head>
 <body>
-  <h1>SwipeTrainer Support</h1>
-  <p class="sub">Help for SwipeTrainer: Stock Charts, the chart-reading training game.</p>
 
-  <div class="card">
-    <strong>Contact us</strong><br />
-    Email: <a href="mailto:7atomer@gmail.com?subject=SwipeTrainer%20support">7atomer@gmail.com</a><br />
-    We usually reply within 2 business days.
+<header>
+  <div class="nav">
+    <a class="brand" href="#top">
+      <span class="logo"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l4-5 3 3 5-8 3 4 3-2" stroke="#032417" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      SwipeTrainer
+    </a>
+    <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.tomeraminizar.swipetrainer"><b>Get it free</b></a>
   </div>
+</header>
 
-  <h2>Common questions</h2>
+<main id="top">
 
-  <p><strong>Is this real trading?</strong><br />
-  No. SwipeTrainer is an educational game. Every chart is historical market data, there is no real money and nothing in the app is investment advice.</p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">Free · Learn by playing</span>
+        <h1>Read the chart <em>before</em> the move happens.</h1>
+        <p class="lede">SwipeTrainer is the game that trains your trading eye. Call bullish or bearish on 800 real historical charts, then see exactly what happened next.</p>
+        <div class="store-row">
+          <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.tomeraminizar.swipetrainer">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3.5v17a1 1 0 0 0 1.5.87l14-8.5a1 1 0 0 0 0-1.74l-14-8.5A1 1 0 0 0 3 3.5Z"/></svg>
+            <span><small>Get it on</small><b>Google Play</b></span>
+          </a>
+          <a class="btn btn-play btn-app" href="https://apps.apple.com/app/swipetrainer-stock-charts/id6819831931">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.4 0-2.8.9-3.5 2.2-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.5 2.2 2.6 2.1 1-.04 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.6 1.1-.02 1.8-1 2.5-2 .8-1.2 1.1-2.3 1.1-2.4-.02-.01-2.1-.8-2.1-3.1ZM14.3 5.9c.6-.7 1-1.7.9-2.7-.8 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6.9.1 1.8-.5 2.5-1.2Z"/></svg>
+            <span><small>Download on the</small><b>App Store</b></span>
+          </a>
+        </div>
+        <div class="trust">
+          <span><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>800 real setups</span>
+          <span><svg viewBox="0 0 24 24" fill="none"><path d="M5 12l5 5L20 7" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>No experience needed</span>
+        </div>
+      </div>
 
-  <p><strong>Do I need an account?</strong><br />
-  No. The whole app works without signing in. An account (Sign in with Apple or Google) only keeps your stats across devices.</p>
+      <div class="phone-wrap">
+        <div class="phone"><div class="screen">
+          <div class="card" id="demoCard">
+            <div class="row">
+              <div><div class="tk">NVDA</div><div class="co">NVIDIA Corp</div></div>
+              <div class="pill">BREAKOUT</div>
+            </div>
+            <div class="chartArea"><svg id="chart" viewBox="0 0 262 250" aria-label="Interactive candlestick demo"></svg></div>
+            <div class="prompt" id="prompt">Your call — try it 👇</div>
+            <div class="swipe">
+              <button class="sw-bear" id="bearBtn" type="button">← BEARISH</button>
+              <button class="sw-bull" id="bullBtn" type="button">BULLISH →</button>
+            </div>
+            <div class="verdict" id="verdict"></div>
+          </div>
+          <div class="finger" id="finger">👆</div>
+        </div></div>
+      </div>
+    </div>
+  </section>
 
-  <p><strong>How do I delete my account and data?</strong><br />
-  In the app: <em>Settings &rarr; Delete account</em>. You can also see the details on our
-  <a href="delete-account.html">account deletion page</a>, or email us and we will do it for you.</p>
+  <!-- WHO -->
+  <section class="who">
+    <div class="wrap">
+      <h2 class="reveal">Built for anyone learning the market</h2>
+      <p class="sub reveal">Whether you're placing your first trade or sharpening a seasoned eye.</p>
+      <div class="chips reveal">
+        <span class="chip"><b>Aspiring</b> traders</span>
+        <span class="chip"><b>Swing &amp; day</b> traders</span>
+        <span class="chip"><b>Active</b> investors</span>
+        <span class="chip"><b>Finance</b> students</span>
+        <span class="chip">Anyone <b>curious</b> about charts</span>
+      </div>
+    </div>
+  </section>
 
-  <p><strong>How do I reset my stats?</strong><br />
-  In the app: <em>Settings &rarr; Reset stats</em>.</p>
+  <!-- STEPS -->
+  <section class="steps">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Learn the way traders actually learn — by reps</h2>
+        <p>Three seconds a chart. Real feedback every time.</p>
+      </div>
+      <div class="step-grid">
+        <div class="step reveal"><div class="n">STEP 01</div><h3>See a real chart</h3><p>Every setup is a genuine moment from market history — the same chart a trader saw that day, frozen right before the move.</p></div>
+        <div class="step reveal"><div class="n">STEP 02</div><h3>Make your call</h3><p>Swipe right for bullish, left for bearish. Trust the pattern, the volume, the momentum — and commit.</p></div>
+        <div class="step reveal"><div class="n">STEP 03</div><h3>See what happened</h3><p>The chart fills in candle by candle to reveal the real outcome, the exact move, and the key signal to spot next time.</p></div>
+      </div>
+    </div>
+  </section>
 
-  <p><strong>Charts or ads are not loading.</strong><br />
-  Check your internet connection and reopen the app. If the problem continues, email us with your device model and iOS version.</p>
+  <!-- FEATURES -->
+  <section>
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2>Everything you need to sharpen up</h2>
+        <p>Free play to practise, duels to compete, and a daily challenge to keep you coming back.</p>
+      </div>
+      <div class="feat-grid">
+        <div class="feat reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l5-6 4 3 5-8 4 5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>Train your eye</h3><p>800 hand-picked real setups across stocks and crypto, beginner to advanced, each with the pattern explained.</p>
+        </div>
+        <div class="feat reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3v3m0 12v3M3 12h3m12 0h3" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="12" r="4" stroke-width="2"/></svg></div>
+          <h3>Daily challenge</h3><p>Five fresh setups a day, a global leaderboard, and a streak that rewards showing up.</p>
+        </div>
+        <div class="feat reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M6 4l3 8-3 8M18 4l-3 8 3 8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3>1v1 battles</h3><p>Duel other traders or an AI rival over 10 charts on a clock, then review every call: your pick vs. what really happened.</p>
+        </div>
+        <div class="feat reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16M4 12h16M4 18h11" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Pattern library</h3><p>Study breakouts, breakdowns, double tops, head-and-shoulders and more — each with its real historical hit rate.</p>
+        </div>
+        <div class="feat reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M4 20V11m5 9V5m5 15v-6m5 6V8" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Track your progress</h3><p>Accuracy by difficulty and asset class, your level, streaks, and achievements that unlock as you sharpen.</p>
+        </div>
+        <div class="feat reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke-width="2"/><path d="M12 7v5l3.5 2" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3>Trading analysis</h3><p>Once you've made enough calls, get a full read on your chart reading: whether you lean bullish or bearish, which patterns are your edge, and where your accuracy leaks.</p>
+        </div>
+        <div class="feat reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none"><path d="M3 18c4-9 6 3 10-6s5 2 8-6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 4"/></svg></div>
+          <h3>Zoom and compare to the market</h3><p>Zoom from two weeks out to a full year, with dotted S&amp;P 500 and Nasdaq lines on every chart so you can see how the stock moved against the market.</p>
+        </div>
+        <div class="feat reveal">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none"><circle cx="6" cy="12" r="2.5" stroke-width="2"/><circle cx="18" cy="6" r="2.5" stroke-width="2"/><circle cx="18" cy="18" r="2.5" stroke-width="2"/><path d="M8.2 11l7.6-4M8.2 13l7.6 4" stroke-width="2"/></svg></div>
+          <h3>Challenge your friends</h3><p>Share your score after a round, a duel or the daily challenge, and see who reads charts better.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h2>Legal</h2>
-  <p>
-    <a href="privacy-policy.html">Privacy policy</a> &middot;
-    <a href="terms-of-service.html">Terms of service</a>
-  </p>
+  <!-- WHY -->
+  <section class="why">
+    <div class="wrap">
+      <div class="reveal">
+        <h2>Stop watching videos.<br>Start training your eye.</h2>
+        <p>You don't learn to read a chart by reading about it. You learn it the way pros do — thousands of reps, instant feedback, and the discipline to make a call before you know the answer.</p>
+        <p>SwipeTrainer turns that grind into a game you'll actually keep open.</p>
+      </div>
+      <div class="stat-row reveal">
+        <div class="stat"><b>800</b><small>hand-picked real setups</small></div>
+        <div class="stat"><b>~10s</b><small>per chart — train anywhere</small></div>
+        <div class="stat"><b>100%</b><small>real market data, no fakes</small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="wrap">
+      <h2 class="reveal">Questions traders ask</h2>
+      <div class="faq-list">
+        <details class="reveal"><summary>Is SwipeTrainer free?</summary><p>Yes. It's free to download and play on iPhone and Android, supported by ads.</p></details>
+        <details class="reveal"><summary>Is this a game to learn stock trading?</summary><p>Exactly. SwipeTrainer is a game built to teach chart reading. You swipe bullish or bearish on real historical stock and crypto charts, then see what actually happened and why — building the pattern recognition that trading depends on.</p></details>
+        <details class="reveal"><summary>Do I need trading experience?</summary><p>Not at all. A guided intro teaches the core patterns in under two minutes, and the difficulty scales from beginner to advanced as you improve.</p></details>
+        <details class="reveal"><summary>How do I practice reading candlestick charts?</summary><p>SwipeTrainer gives you hundreds of real candlestick setups to call, with instant feedback and the key signal explained on every one. That repetition is the fastest way to internalize what candlestick patterns are telling you.</p></details>
+        <details class="reveal"><summary>Is it good for swing trading?</summary><p>Yes. Setups span breakouts, breakdowns, flags, double tops and more over multi-day horizons — the exact patterns swing traders watch for.</p></details>
+        <details class="reveal"><summary>Is it available on iPhone?</summary><p>Yes. SwipeTrainer is on the App Store for iPhone and on Google Play for Android.</p></details>
+        <details class="reveal"><summary>Does SwipeTrainer give financial advice?</summary><p>No. SwipeTrainer is an educational training game using historical market data. It is not financial advice and does not offer real trading. Always do your own research.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT -->
+  <section class="faq" id="support">
+    <div class="wrap">
+      <h2 class="reveal">Support</h2>
+      <div class="faq-list">
+        <details class="reveal" open><summary>Contact us</summary><p>Email <a href="mailto:7atomer@gmail.com?subject=SwipeTrainer%20support">7atomer@gmail.com</a>. We usually reply within 2 business days.</p></details>
+        <details class="reveal"><summary>Do I need an account?</summary><p>No. The whole app works without signing in. An account (Sign in with Apple or Google) only keeps your stats across devices.</p></details>
+        <details class="reveal"><summary>How do I delete my account and data?</summary><p>In the app: Settings, then Delete account. You can also read the <a href="delete-account.html">account deletion page</a>, or email us and we will do it for you.</p></details>
+        <details class="reveal"><summary>How do I reset my stats?</summary><p>In the app: Settings, then Reset stats.</p></details>
+        <details class="reveal"><summary>Charts or ads are not loading</summary><p>Check your internet connection and reopen the app. If the problem continues, email us with your device model and OS version.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final">
+    <div class="wrap">
+      <h2 class="reveal">Can you read the chart before the move?</h2>
+      <p class="reveal">Find out in your first 30 seconds. Free on iPhone and Android.</p>
+      <div class="store-row reveal">
+        <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.tomeraminizar.swipetrainer">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3.5v17a1 1 0 0 0 1.5.87l14-8.5a1 1 0 0 0 0-1.74l-14-8.5A1 1 0 0 0 3 3.5Z"/></svg>
+          <span><small>Get it on</small><b>Google Play</b></span>
+        </a>
+        <a class="btn btn-play btn-app" href="https://apps.apple.com/app/swipetrainer-stock-charts/id6819831931">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.4 12.6c0-2.2 1.8-3.3 1.9-3.4-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.3.8-.7 0-1.7-.8-2.8-.8-1.4 0-2.8.9-3.5 2.2-1.5 2.6-.4 6.5 1.1 8.6.7 1 1.5 2.2 2.6 2.1 1-.04 1.4-.7 2.7-.7 1.2 0 1.6.7 2.7.6 1.1-.02 1.8-1 2.5-2 .8-1.2 1.1-2.3 1.1-2.4-.02-.01-2.1-.8-2.1-3.1ZM14.3 5.9c.6-.7 1-1.7.9-2.7-.8 0-1.9.6-2.5 1.3-.5.6-1 1.6-.9 2.6.9.1 1.8-.5 2.5-1.2Z"/></svg>
+          <span><small>Download on the</small><b>App Store</b></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot">
+    <div>
+      <div class="brand" style="margin-bottom:10px;font-size:1.05rem"><span class="logo" style="width:26px;height:26px;border-radius:8px"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l4-5 3 3 5-8 3 4 3-2" stroke="#032417" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span> SwipeTrainer</div>
+      Train your trading eye, one swipe at a time.
+    </div>
+    <div>
+      <a href="https://apps.apple.com/app/swipetrainer-stock-charts/id6819831931">App Store</a>
+      <a href="https://play.google.com/store/apps/details?id=com.tomeraminizar.swipetrainer">Google Play</a>
+      <a href="#support">Support</a>
+      <a href="privacy-policy.html">Privacy</a>
+      <a href="terms-of-service.html">Terms</a>
+      <a href="#top">Back to top</a>
+    </div>
+  </div>
+  <p class="disclaimer">SwipeTrainer is an educational training game that uses historical market data and simulated scenarios. It is not a brokerage, does not offer real trading, and nothing in the app or on this site is investment advice. Past chart patterns do not guarantee future results. Always do your own research and consult a licensed financial advisor before making investment decisions. © 2026 Tomer Aminizar.</p>
+</footer>
+
+<script>
+// ===== Interactive one-swipe teaser: real answer is BULLISH (+18%). =====
+(function(){
+  var svg=document.getElementById('chart');
+  if(!svg) return;
+  var ns='http://www.w3.org/2000/svg';
+  var W=262,H=250,pad=10;
+  var before=[120,121,119,122,120,123,121,120,118,121,120,122,121,123];
+  var after=[125,129,133,138,143,148,154];
+  var all=before.concat(after);
+  var lo=Math.min.apply(null,all)-4, hi=Math.max.apply(null,all)+6;
+  var slot=(W-16)/all.length;
+  function y(v){return pad+(H-2*pad)*(1-(v-lo)/(hi-lo));}
+  var reduce=window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  var afterEls=[];
+  for(var g=0;g<4;g++){var ln=document.createElementNS(ns,'line');var yy=pad+(H-2*pad)*g/3;ln.setAttribute('x1',0);ln.setAttribute('x2',W);ln.setAttribute('y1',yy);ln.setAttribute('y2',yy);ln.setAttribute('stroke','rgba(255,255,255,.06)');svg.appendChild(ln);}
+  function candle(i,v,prev){
+    var up=v>=prev,col=up?'#12cf86':'#f04458',x=8+i*slot+slot/2,bw=slot*0.6;
+    var top=y(Math.max(prev,v)),bot=y(Math.min(prev,v));
+    var wick=document.createElementNS(ns,'line');
+    wick.setAttribute('x1',x);wick.setAttribute('x2',x);wick.setAttribute('y1',y(Math.max(prev,v)+2));wick.setAttribute('y2',y(Math.min(prev,v)-2));
+    wick.setAttribute('stroke',col);wick.setAttribute('stroke-width','1.4');
+    var r=document.createElementNS(ns,'rect');
+    r.setAttribute('x',x-bw/2);r.setAttribute('y',top);r.setAttribute('width',bw);r.setAttribute('height',Math.max(bot-top,2));r.setAttribute('rx','1.6');r.setAttribute('fill',col);
+    var grp=document.createElementNS(ns,'g');grp.appendChild(wick);grp.appendChild(r);svg.appendChild(grp);
+    return grp;
+  }
+  all.forEach(function(v,i){var prev=i?all[i-1]:v-1;var gg=candle(i,v,prev);if(i>=before.length){gg.style.transition='opacity .28s';gg.style.opacity='0';afterEls.push(gg);}});
+  var mx=8+before.length*slot;
+  var ml=document.createElementNS(ns,'line');
+  ml.setAttribute('x1',mx);ml.setAttribute('x2',mx);ml.setAttribute('y1',2);ml.setAttribute('y2',H-2);
+  ml.setAttribute('stroke','#12cf86');ml.setAttribute('stroke-width','1.4');ml.setAttribute('stroke-dasharray','4 3');ml.setAttribute('opacity','0');ml.style.transition='opacity .3s';svg.appendChild(ml);
+
+  var prompt=document.getElementById('prompt'),swipe=document.querySelector('.swipe'),
+      verdict=document.getElementById('verdict'),finger=document.getElementById('finger'),
+      bull=document.getElementById('bullBtn'),bear=document.getElementById('bearBtn');
+  var done=false,autoT;
+
+  function revealChart(){ml.setAttribute('opacity','.55');afterEls.forEach(function(gg,i){setTimeout(function(){gg.style.opacity='1';},i*120);});}
+
+  function resolve(choice){ // 'bullish' | 'bearish'
+    if(done) return; done=true; clearTimeout(autoT);
+    var right=choice==='bullish';
+    (choice==='bullish'?bull:bear).classList.add('flash');
+    prompt.style.opacity='0';
+    revealChart();
+    setTimeout(function(){
+      swipe.style.display='none';prompt.style.display='none';
+      verdict.innerHTML=
+        '<div class="v" style="color:'+(right?'#12cf86':'#f04458')+'">'+(right?'✓ YOU CALLED IT':'✗ NOT QUITE — IT RAN')+'</div>'+
+        '<div class="m" style="color:#12cf86">+18%</div>'+
+        '<a class="cta" href="'+(/iPhone|iPad|iPod/.test(navigator.userAgent)?'https://apps.apple.com/app/swipetrainer-stock-charts/id6819831931':'https://play.google.com/store/apps/details?id=com.tomeraminizar.swipetrainer')+'">Play the full game free →</a>';
+      verdict.classList.add('show');
+    },780);
+  }
+  bull.addEventListener('click',function(){resolve('bullish');});
+  bear.addEventListener('click',function(){resolve('bearish');});
+
+  // Auto-demo the swipe if the visitor doesn't interact (nudge, then reveal).
+  if(!reduce){
+    finger.style.opacity='0';
+    autoT=setTimeout(function(){
+      if(done) return;
+      finger.style.transition='opacity .3s';finger.style.opacity='.95';
+      finger.style.transition='opacity .3s, transform .6s cubic-bezier(.4,0,.4,1)';
+      requestAnimationFrame(function(){finger.style.transform='translate(-30px,-26px)';});
+      bull.classList.add('flash');
+      setTimeout(function(){finger.style.opacity='0';},900);
+      setTimeout(function(){resolve('bullish');},1000);
+    },3600);
+  }
+})();
+
+// scroll reveal
+(function(){
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver'in window)){els.forEach(function(e){e.classList.add('in');});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15});
+  els.forEach(function(e){io.observe(e);});
+})();
+</script>
+
+<script>
+// Put the visitor's own store button first (iPhone -> App Store, Android -> Google Play).
+(function(){
+  var ua=navigator.userAgent||"", ios=/iPhone|iPad|iPod/.test(ua);
+  if(!ios) return;
+  var top=document.querySelector('header .btn-play'); if(top) top.href='https://apps.apple.com/app/swipetrainer-stock-charts/id6819831931';
+  document.querySelectorAll('.store-row').forEach(function(row){
+    var app=row.querySelector('.btn-app'); if(app) row.insertBefore(app,row.firstChild);
+  });
+})();
+</script>
 </body>
 </html>
