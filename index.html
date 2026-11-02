@@ -454,5 +454,16 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
   });
 })();
 </script>
+<script>
+// Fade sections in as they scroll into view. Everything shows regardless if this fails.
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  function showAll(){els.forEach(function(e){e.classList.add('in');});}
+  if(!('IntersectionObserver' in window)){showAll();return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});},{threshold:0.08,rootMargin:'0px 0px -4% 0px'});
+  els.forEach(function(e){io.observe(e);});
+  setTimeout(showAll,4000);
+})();
+</script>
 </body>
 </html>
