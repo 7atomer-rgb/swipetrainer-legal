@@ -274,7 +274,7 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
       <span class="logo"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l4-5 3 3 5-8 3 4 3-2" stroke="#032417" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       SwipeTrainer
     </a>
-    <a class="btn btn-play" href="https://play.google.com/store/apps/details?id=com.tomeraminizar.swipetrainer"><b>Get it free</b></a>
+    <a class="btn btn-play" href="#top"><b>Get it free</b></a>
   </div>
 </header>
 
@@ -299,8 +299,8 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
 
       <div class="phone-wrap">
         <div class="phone"><div class="screen hero-screen">
-          <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg" aria-label="SwipeTrainer in action: a 1v1 duel with real charts">
-            <source src="hero.mp4" type="video/mp4" />
+          <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="hero-poster.jpg?v=2" aria-label="SwipeTrainer in action: swipe a real chart, then see what happened">
+            <source src="hero.mp4?v=2" type="video/mp4" />
           </video>
         </div></div>
       </div>
@@ -509,7 +509,6 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
 (function(){
   var ua=navigator.userAgent||"", ios=/iPhone|iPad|iPod/.test(ua);
   if(!ios) return;
-  var top=document.querySelector('header .btn-play'); if(top) top.href='https://apps.apple.com/app/swipetrainer-stock-charts/id6819831931';
   document.querySelectorAll('.store-row').forEach(function(row){
     var app=row.querySelector('.store-apple'); if(app) row.insertBefore(app,row.firstChild);
   });
