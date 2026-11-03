@@ -506,6 +506,18 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
 </footer>
 
 <script>
+// Tag the store links with where the visitor came from (?s=tiktok, ?s=duel ...):
+// Android installs report it back to us, and App Store Connect shows it per campaign.
+(function(){
+  var m=/[?&](?:s|src|utm_source)=([^&#]+)/.exec(location.search), src=m?decodeURIComponent(m[1]).toLowerCase().replace(/[^a-z0-9_.-]/g,'').slice(0,40):'website';
+  if(!src) src='website';
+  document.querySelectorAll('a[href*="play.google.com"]').forEach(function(a){
+    a.href=a.href.split('&referrer=')[0]+'&referrer='+encodeURIComponent('utm_source='+src+'&utm_medium=web');
+  });
+  document.querySelectorAll('a[href*="apps.apple.com"]').forEach(function(a){
+    a.href=a.href.split('?')[0]+'?ct='+encodeURIComponent(src);
+  });
+})();
 // Put the visitor's own store button first (iPhone -> App Store, Android -> Google Play).
 (function(){
   var ua=navigator.userAgent||"", ios=/iPhone|iPad|iPod/.test(ua);
