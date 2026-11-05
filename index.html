@@ -215,6 +215,7 @@ header{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:co
 
 
 /* ============ LEARN (SEO guide) ============ */
+.navlink{display:none}@media (min-width:560px){.navlink{display:inline}}
 .learn{border-top:1px solid var(--line)}
 .learn .intro{max-width:760px;margin:0 auto 44px;text-align:center}
 .learn .intro h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin-bottom:16px}
@@ -275,7 +276,7 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
       <span class="logo"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l4-5 3 3 5-8 3 4 3-2" stroke="#032417" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
       SwipeTrainer
     </a>
-    <a class="btn btn-play" href="#get"><b>Get it free</b></a>
+    <nav style="display:flex;gap:16px;align-items:center;font-weight:700"><a class="navlink" href="play.html">Play free</a><a class="navlink" href="patterns.html">Patterns</a><a class="btn btn-play" href="#get"><b>Get it free</b></a></nav>
   </div>
 </header>
 
@@ -404,7 +405,7 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
       <div class="intro reveal">
         <h2>Technical trading, in plain English</h2>
         <p>Technical analysis means making trading decisions from the chart: price, volume and the shapes they form over time. It ignores the company's accounts and asks a simpler question. What are buyers and sellers doing right now, and what did they do the last time the chart looked like this?</p>
-        <p>Nobody gets every call right, and no pattern works every time. The goal is to read the odds better than you did last month. That comes from seeing a lot of charts.</p>
+        <p>Nobody gets every call right, and no pattern works every time. The goal is to read the odds better than you did last month. That comes from seeing a lot of charts. <a href="patterns.html" style="color:var(--bull);font-weight:700">See the 8 main patterns with real examples</a>, or <a href="play.html" style="color:var(--bull);font-weight:700">try the free 5-chart quiz</a>.</p>
       </div>
       <div class="learn-grid">
         <div class="learn-card reveal">
@@ -496,6 +497,8 @@ footer{border-top:1px solid var(--line);padding:46px 24px}
     <div>
       <a href="https://apps.apple.com/app/swipetrainer-stock-charts/id6819831931">App Store</a>
       <a href="https://play.google.com/store/apps/details?id=com.tomeraminizar.swipetrainer">Google Play</a>
+      <a href="play.html">Free chart quiz</a>
+      <a href="patterns.html">Chart patterns</a>
       <a href="#support">Support</a>
       <a href="privacy-policy.html">Privacy</a>
       <a href="terms-of-service.html">Terms</a>

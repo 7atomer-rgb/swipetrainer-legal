@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Stock Chart Quiz: Bullish or Bearish? Play 5 Real Charts | SwipeTrainer</title>
+<meta name="description" content="Play a free stock chart quiz: call real historical charts bullish or bearish, see what happened next, and learn the pattern. No sign-up needed.">
+<link rel="canonical" href="https://swipetrainer.com/play.html">
+<meta property="og:type" content="article"><meta property="og:site_name" content="SwipeTrainer"><meta property="og:title" content="Free Stock Chart Quiz: Bullish or Bearish? Play 5 Real Charts | SwipeTrainer"><meta property="og:description" content="Play a free stock chart quiz: call real historical charts bullish or bearish, see what happened next, and learn the pattern. No sign-up needed."><meta property="og:url" content="https://swipetrainer.com/play.html"><meta property="og:image" content="https://swipetrainer.com/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0a0c10">
+<link rel="icon" type="image/png" href="icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"SwipeTrainer free chart quiz","url":"https://swipetrainer.com/play.html","applicationCategory":"EducationalApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head><body>
+<header><div class="nav">
+  <a class="brand" href="index.html"><span class="logo"><svg viewBox="0 0 24 24" fill="none"><path d="M3 17l4-5 3 3 5-8 3 4 3-2" stroke="#032417" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>SwipeTrainer</a>
+  <nav style="display:flex;gap:18px;align-items:center;font-weight:700"><a class="navlink" href="play.html">Play free</a><a class="navlink" href="patterns.html">Patterns</a><a class="btn btn-play" href="index.html#get"><b>Get it free</b></a></nav>
+</div></header>
+<main class="page">
+<div class="crumbs"><a href="index.html">Home</a> / Free chart quiz</div>
+<h1>Free stock chart quiz: bullish or bearish?</h1>
+<p class="lead">Five real historical charts. Call each one, see what happened over the next 10 trading days, and learn the pattern behind it. No sign-up.</p>
+<div id="game"></div>
+<noscript><p>This quiz needs JavaScript. You can also play the full game in the free app.</p></noscript>
+<h2>How it works</h2>
+<ol><li>You see a real stock chart up to one day. The date and the future are hidden.</li><li>Tap Bullish or Bearish (or swipe, or use the arrow keys).</li><li>The next 10 trading days play out, and you see the pattern and the lesson.</li></ol>
+<p>The charts are real, taken from our library of hand-picked setups that follow strict textbook rules for each of <a href="patterns.html">8 chart patterns</a>. Some of them fail on purpose, because real patterns do.</p>
+<div class="cta-band"><h3>Want hundreds more?</h3><p>The SwipeTrainer app has the full library, daily challenges and 1v1 duels. Free on iPhone and Android.</p><div class="badges"><a href="https://apps.apple.com/app/swipetrainer-stock-charts/id6819831931?ct=web-play"><img src="badge-app-store.svg" alt="Download on the App Store"></a><a href="https://play.google.com/store/apps/details?id=com.tomeraminizar.swipetrainer&referrer=utm_source%3Dweb-play%26utm_medium%3Dweb"><img src="badge-google-play.png" alt="Get it on Google Play"></a></div></div>
+<h2>Learn the patterns</h2>
+<div class="related"><a href="pattern-flag.html">Bull and bear flags</a><a href="pattern-trading-range.html">Trading range / horizontal channel</a><a href="pattern-accumulation.html">Accumulation (volume)</a><a href="pattern-volatility-contraction.html">Volatility contraction (VCP)</a><a href="pattern-double-top-bottom.html">Double top and double bottom</a><a href="pattern-head-and-shoulders.html">Head and shoulders (and inverse)</a><a href="pattern-breakaway-gap.html">Breakaway gap</a><a href="pattern-parabolic-capitulation.html">Parabolic moves and capitulation</a></div>
+</main><footer><div class="foot"><div><div class="brand" style="margin-bottom:10px;font-size:1.05rem">SwipeTrainer</div>Train your trading eye, one swipe at a time.</div>
+<div><a href="play.html">Play free</a><a href="patterns.html">Chart patterns</a><a href="index.html">Home</a><a href="privacy-policy.html">Privacy</a><a href="terms-of-service.html">Terms</a></div></div>
+<p class="disclaimer">SwipeTrainer is an educational training game that uses historical market data. It is not a brokerage, does not offer real trading, and nothing on this site is investment advice. Past patterns do not guarantee future results.</p></footer>
+<script src="chartkit.js"></script>
+<script>
+(function(){
+ var root=document.getElementById('game'),N=5;
+ fetch('charts.json').then(function(r){return r.json();}).then(function(all){
+  // five charts from five different patterns
+  var byFam={};all.forEach(function(c){(byFam[c.family]=byFam[c.family]||[]).push(c);});
+  var fams=Object.keys(byFam).sort(function(){return Math.random()-.5;}).slice(0,N),picks=fams.map(function(f){var a=byFam[f];return a[Math.floor(Math.random()*a.length)];}),i=0,score=0;
+  function next(){
+    if(i>=N){return done();}
+    ChartKit.mount(root,picks[i],{bar:[i,N],keys:true,nextLabel:i===N-1?'See my score':'Next chart',onDone:function(ok){if(ok)score++;i++;next();}});
+  }
+  function done(){
+    var msg=score>=5?'Perfect. You have a sharp eye.':score>=4?'Very good.':score>=3?'Solid start.':score>=2?'Not bad. Patterns take practice.':'Tough set. Real charts are hard, and that is the point.';
+    root.innerHTML='<div class="cw"><div class="score-big">'+score+' / '+N+'</div><p style="text-align:center">'+msg+'</p><div class="btn-row"><button class="btn-line" id="again">Play again</button><button class="btn-line" id="share">Share my score</button></div></div>';
+    document.getElementById('again').onclick=function(){location.reload();};
+    document.getElementById('share').onclick=function(){var t='I got '+score+'/'+N+' on the SwipeTrainer chart quiz. Can you beat me? https://swipetrainer.com/play.html?s=share';if(navigator.share){navigator.share({text:t}).catch(function(){});}else if(navigator.clipboard){navigator.clipboard.writeText(t);this.textContent='Copied!';}};
+  }
+  next();
+ });
+})();
+</script></body></html>
